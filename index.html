@@ -20,9 +20,9 @@
     </head>
     <body>
         <header class="site-header">
-            <a class="logo"style="font-size: 24px; margin:10px" href="index.html">Sklep</a>
+            <a class="logo" href="index.html">Sklep</a>
             <nav class="site-nav" aria-label="Nawigacja główna">
-                <a href="index.html">Strona główna</a>
+                <a href="index.html" aria-current="page">Strona główna</a>
                 <a href="oferta.html">Oferta</a>
                 <a href="kontakt.html">Kontakt</a>
                 <a href="page3.html">Blog</a>
@@ -32,31 +32,31 @@
             <section class="hero" aria-label="Sekcja powitalna">
                 <h1 id="title">Tytuł sklepu</h1>
                 <p>Opis sklepu.</p>
-                <a href="oferta.html">Przejdź do oferty</a>
+                <a class="btn btn-primary" href="oferta.html">Przejdź do oferty</a>
             </section>
-            <section class="content" aria-label="Oferta">
+            <section class="content preview" aria-label="Oferta">
                 <h2>Nasza oferta</h2>
-                <a href="oferta.html">Zobacz więcej</a>
-                <article>
+                <a class="more-link" href="oferta.html">Zobacz więcej</a>
+                <article class="product-tile">
                     <h3>Produkt 1</h3>
                 </article>
-                <article>
+                <article class="product-tile">
                     <h3>Produkt 2</h3>
                 </article>
-                <article>
+                <article class="product-tile">
                     <h3>Produkt 3</h3>
                 </article>
-                <article>
+                <article class="product-tile">
                     <h3>Produkt 4</h3>
                 </article>
-                <article>
+                <article class="product-tile">
                     <h3>Produkt 5</h3>
                 </article>
             </section>
-            <section class="content" aria-label="Blog">
+            <section class="content preview" aria-label="Blog">
                 <h2>Z naszego bloga</h2>
-                <a href="page3.html">Zobacz więcej</a>
-                <article>
+                <a class="more-link" href="page3.html">Zobacz więcej</a>
+                <article class="teaser">
                     <h3>Blog 1</h3>
                     <p>Zajawka bloga 1.</p>
                 </article>

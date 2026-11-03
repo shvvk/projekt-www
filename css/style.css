@@ -1,0 +1,407 @@
+/* ===== Paleta kolorów (z projektu w Figmie) ===== */
+:root {
+    --primary: #367f27;       /* zielony: przyciski */
+    --primary-dark: #2a6420;  /* ciemniejszy zielony: linki, hover */
+    --accent: #c94a22;        /* pomarańczowy: "Przeczytaj" */
+    --accent-dark: #a73b1a;
+    --bg: #f7f3ec;            /* jasny krem: tło strony i kart */
+    --surface: #e8e1d4;       /* ciemniejszy krem: tło treści */
+    --dark: #221f1b;          /* nagłówek i stopka */
+    --text: #1a1a1a;
+    --border: #cfc5b3;
+}
+
+/* ===== Styl bazowy ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 12px;
+    line-height: 1.25;
+    color: var(--dark);
+}
+
+h1 {
+    font-size: 32px;
+    color: var(--primary-dark);
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    margin: 0 0 12px;
+}
+
+a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--dark);
+    text-decoration: underline;
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ===== Nagłówek i nawigacja ===== */
+.site-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 40px;
+    background-color: var(--dark);
+}
+
+.logo {
+    display: inline-block;
+    margin-right: 32px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--bg);
+}
+
+.logo:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-nav {
+    display: inline-block;
+}
+
+.site-nav a {
+    display: inline-block;
+    margin-right: 4px;
+    padding: 8px 14px;
+    color: var(--surface);
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover {
+    color: #ffffff;
+    background-color: var(--primary);
+    text-decoration: none;
+}
+
+.site-nav a[aria-current="page"] {
+    color: #ffffff;
+    background-color: #3a352f;
+}
+
+/* ===== Główna treść ===== */
+.site-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 40px 16px;
+    background-color: var(--surface);
+}
+
+section {
+    margin-bottom: 24px;
+    padding: 24px 32px;
+    background-color: var(--bg);
+}
+
+/* wąska kolumna wyśrodkowana w treści (kontakt) */
+.narrow {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Przyciski ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-accent {
+    background-color: var(--accent);
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-dark);
+}
+
+button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 28px;
+    font: inherit;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ===== Strona główna ===== */
+.hero {
+    max-width: 640px;
+    margin: 0 auto 24px;
+    padding: 40px 32px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    margin-bottom: 24px;
+}
+
+.hero .btn {
+    padding: 14px 40px;
+    font-size: 18px;
+}
+
+/* sekcja z linkiem "Zobacz więcej" w prawym górnym rogu */
+.preview {
+    position: relative;
+}
+
+.preview h2 {
+    padding-right: 160px;
+}
+
+.more-link {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    padding: 6px 16px;
+    font-size: 14px;
+    color: var(--dark);
+    background-color: var(--surface);
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.more-link:hover {
+    color: var(--dark);
+    background-color: var(--border);
+    text-decoration: none;
+}
+
+.product-tile {
+    display: inline-block;
+    vertical-align: top;
+    width: 18%;
+    min-width: 110px;
+    height: 120px;
+    margin: 8px 1% 0 0;
+    padding: 16px;
+    background-color: var(--surface);
+}
+
+.product-tile h3 {
+    font-size: 16px;
+}
+
+.teaser {
+    width: 70%;
+    margin-top: 8px;
+    padding: 16px 24px;
+    background-color: var(--surface);
+}
+
+.teaser h3 {
+    margin-bottom: 4px;
+}
+
+.teaser p {
+    margin: 0;
+}
+
+/* ===== Oferta ===== */
+.product-list,
+.post-list {
+    padding: 0;
+    background-color: transparent;
+}
+
+.product-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    min-width: 200px;
+    margin: 0 1.5% 24px 0;
+    padding: 24px;
+    text-align: center;
+    background-color: var(--bg);
+}
+
+.product-card h2 {
+    font-size: 20px;
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    background-color: var(--surface);
+}
+
+.product-card button {
+    width: 100%;
+    margin-top: 16px;
+}
+
+/* ===== Blog ===== */
+.post {
+    margin-bottom: 24px;
+    padding: 24px 32px;
+    background-color: var(--bg);
+}
+
+.post p {
+    min-height: 120px;
+    margin: 0;
+    padding: 24px;
+    background-color: var(--surface);
+}
+
+.post .btn {
+    display: block;
+    width: fit-content;
+    margin: 12px 0 0 auto;
+}
+
+/* ===== Formularze ===== */
+form {
+    max-width: 560px;
+}
+
+label {
+    display: block;
+    margin: 16px 0 6px;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--text);
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.checkbox-label {
+    font-weight: 400;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+    accent-color: var(--primary);
+}
+
+/* ===== Stopka ===== */
+.site-footer {
+    /* tekst wyrównany do kolumny treści (1100px) */
+    padding: 32px max(40px, calc((100% - 1100px) / 2 + 40px));
+    color: var(--surface);
+    background-color: var(--dark);
+}
+
+.site-footer p {
+    margin: 0 0 8px;
+}
+
+.site-footer a {
+    color: var(--bg);
+    text-decoration: underline;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+}
+
+.site-footer button {
+    margin: 8px 8px 0 0;
+    padding: 8px 20px;
+    color: var(--bg);
+    background-color: transparent;
+    border: 1px solid var(--bg);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-footer button:hover {
+    color: var(--dark);
+    background-color: var(--bg);
+}

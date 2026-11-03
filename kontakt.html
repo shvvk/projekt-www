@@ -13,19 +13,19 @@
             <nav class="site-nav" aria-label="Nawigacja główna">
                 <a href="index.html">Strona główna</a>
                 <a href="oferta.html">Oferta</a>
-                <a href="kontakt.html">Kontakt</a>
+                <a href="kontakt.html" aria-current="page">Kontakt</a>
                 <a href="page3.html">Blog</a>
             </nav>
         </header>
         <main class="site-main">
-            <h1 id="title">Kontakt</h1>
-            <section class="content" aria-label="Dane kontaktowe">
+            <h1 id="title" class="narrow">Kontakt</h1>
+            <section class="content narrow" aria-label="Dane kontaktowe">
                 <h2>Dane kontaktowe</h2>
                 <p>Leśna 63, 42-134 Hutka</p>
                 <p>Telefon: 123 456 789</p>
                 <p>E-mail: kontakt@sklep.pl</p>
             </section>
-            <section class="content" aria-label="Formularz kontaktowy">
+            <section class="content narrow" aria-label="Formularz kontaktowy">
                 <h2>Formularz kontaktowy</h2>
                 <form action="kontakt.html" method="post">
                     <label for="name">Imię</label>
@@ -33,7 +33,7 @@
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email">
                     
-                    <label for="topic">Temat</label><br>
+                    <label for="topic">Temat</label>
                     <select id="topic" name="topic" required>
                     <option value="">-- wybierz --</option>
                     <option value="question">Pytanie</option>
@@ -42,14 +42,14 @@
                     </select>
                     <label for="message">Wiadomość</label>
                     <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
-                    <label>
+                    <label class="checkbox-label">
                     <input type="checkbox" name="consent" value="yes" required>
                     Zgadzam się z regulaminem i polityką prywatności sklepu 
                     </label>
-                    <button type="submit">Send</button>
+                    <button type="submit">Wyślij</button>
                 </form>
             </section>
-            <section class="content" aria-label="Newsletter">
+            <section class="content narrow" aria-label="Newsletter">
                 <h2>Zapis do newslettera</h2>
                 <form>
                     <label for="newsletter-email">E-mail</label>
