@@ -1,17 +1,15 @@
-/* ===== Paleta kolorów (z projektu w Figmie) ===== */
 :root {
-    --primary: #367f27;       /* zielony: przyciski */
-    --primary-dark: #2a6420;  /* ciemniejszy zielony: linki, hover */
-    --accent: #c94a22;        /* pomarańczowy: "Przeczytaj" */
+    --primary: #367f27;
+    --primary-dark: #2a6420;
+    --accent: #c94a22;
     --accent-dark: #a73b1a;
-    --bg: #f7f3ec;            /* jasny krem: tło strony i kart */
-    --surface: #e8e1d4;       /* ciemniejszy krem: tło treści */
-    --dark: #221f1b;          /* nagłówek i stopka */
+    --bg: #f7f3ec;
+    --surface: #e8e1d4;
+    --dark: #221f1b;
     --text: #1a1a1a;
     --border: #cfc5b3;
 }
 
-/* ===== Styl bazowy ===== */
 * {
     box-sizing: border-box;
 }
@@ -72,7 +70,6 @@ img {
     border-radius: 8px;
 }
 
-/* ===== Nagłówek i nawigacja ===== */
 .site-header {
     padding: 16px 40px;
     background-color: var(--dark);
@@ -107,7 +104,6 @@ img {
     background-color: #3a352f;
 }
 
-/* ===== Główna treść ===== */
 .site-main {
     background-color: var(--surface);
 }
@@ -117,7 +113,6 @@ section {
     background-color: var(--bg);
 }
 
-/* ===== Przyciski ===== */
 .btn {
     display: inline-block;
     padding: 12px 32px;
@@ -166,7 +161,6 @@ button:hover {
     background-color: var(--primary-dark);
 }
 
-/* ===== Strona główna ===== */
 .hero {
     padding: 40px 32px;
     text-align: center;
@@ -205,7 +199,6 @@ button:hover {
     text-decoration: none;
 }
 
-/* karty: jeden wygląd dla kafelków na stronie głównej i w ofercie */
 .product-tile,
 .product-card {
     border-radius: 8px;
@@ -246,7 +239,6 @@ button:hover {
     margin: 0;
 }
 
-/* ===== Oferta ===== */
 .product-list,
 .post-list {
     padding: 0;
@@ -276,7 +268,6 @@ button:hover {
     margin-top: 16px;
 }
 
-/* ===== Blog ===== */
 .post {
     padding: 24px 32px;
     background-color: var(--bg);
@@ -293,7 +284,6 @@ button:hover {
     background-color: var(--surface);
 }
 
-/* ===== Formularze ===== */
 form {
     max-width: 560px;
 }
@@ -343,9 +333,8 @@ input[type="checkbox"] {
     accent-color: var(--primary);
 }
 
-/* ===== Stopka ===== */
 .site-footer {
-    /* tekst wyrównany do kolumny treści (1100px) */
+
     padding: 32px max(40px, calc((100% - 1100px) / 2 + 40px));
     color: var(--surface);
     background-color: var(--dark);
