@@ -1,0 +1,104 @@
+/* ===== Układ strony (Flexbox i Grid) =====
+   Kolory, typografia i wygląd elementów są w style.css,
+   tutaj tylko rozmieszczenie, szerokości i odstępy. */
+
+/* Szablon strony: nagłówek, treść, stopka.
+   Wiersz z treścią (1fr) zajmuje resztę wysokości, więc stopka zawsze jest na dole. */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Kontener: ograniczona szerokość i wyśrodkowanie */
+.site-header,
+.site-main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== Nagłówek: logo po lewej, menu po prawej (Flexbox) ===== */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* ===== Główna treść: sekcje jedna pod drugą z równym odstępem ===== */
+.site-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 40px;
+}
+
+.hero {
+    width: 100%;
+    max-width: 640px;
+    align-self: center;
+}
+
+/* nagłówek sekcji: tytuł po lewej, "Zobacz więcej" po prawej */
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+/* ===== Karty (Grid): siatka 3 kolumny, strona główna i oferta ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ===== Oferta i blog: tytuł strony, pod nim lista ===== */
+.product-list,
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* wpis na blogu: tytuł, zajawka, przycisk wyrównany do prawej */
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.post .btn {
+    align-self: flex-end;
+}
+
+/* ===== Kontakt: treść + panel boczny =====
+   Grid, bo obie kolumny (formularz 1fr i panel 340px) ustawiam w jednym miejscu,
+   na kontenerze; we Flexboxie trzeba by nadawać szerokość każdemu dziecku osobno. */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 24px;
+    align-items: start;
+}
+
+/* panel boczny: bloki jeden pod drugim (jeden wymiar, więc Flexbox) */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
