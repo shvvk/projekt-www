@@ -17,7 +17,7 @@
 body {
     margin: 0;
     font-family: Inter, "Segoe UI", Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     color: var(--text);
     background-color: var(--bg);
@@ -32,16 +32,16 @@ h3 {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 2rem;
     color: var(--primary-dark);
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 p {
@@ -67,16 +67,16 @@ a:hover {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
     border-radius: 8px;
 }
 
 .site-header {
-    padding: 16px 40px;
     background-color: var(--dark);
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--bg);
 }
@@ -87,7 +87,6 @@ img {
 }
 
 .site-nav a {
-    padding: 8px 14px;
     color: var(--surface);
     border-radius: 6px;
     transition: background-color 0.2s ease, color 0.2s ease;
@@ -109,7 +108,6 @@ img {
 }
 
 section {
-    padding: 24px 32px;
     background-color: var(--bg);
 }
 
@@ -162,12 +160,11 @@ button:hover {
 }
 
 .hero {
-    padding: 40px 32px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 1.75rem;
     margin-bottom: 8px;
 }
 
@@ -177,7 +174,7 @@ button:hover {
 
 .hero .btn {
     padding: 14px 40px;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .section-head h2 {
@@ -186,7 +183,7 @@ button:hover {
 
 .more-link {
     padding: 6px 16px;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--dark);
     background-color: var(--surface);
     border-radius: 8px;
@@ -218,7 +215,7 @@ button:hover {
 }
 
 .product-tile h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .product-tile p {
@@ -226,7 +223,7 @@ button:hover {
 }
 
 .teaser {
-    width: 70%;
+    max-width: 600px;
     padding: 16px 24px;
     background-color: var(--surface);
 }
@@ -252,7 +249,7 @@ button:hover {
 }
 
 .product-card h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .product-card img {
@@ -269,7 +266,6 @@ button:hover {
 }
 
 .post {
-    padding: 24px 32px;
     background-color: var(--bg);
 }
 
@@ -334,8 +330,6 @@ input[type="checkbox"] {
 }
 
 .site-footer {
-
-    padding: 32px max(40px, calc((100% - 1100px) / 2 + 40px));
     color: var(--surface);
     background-color: var(--dark);
 }
